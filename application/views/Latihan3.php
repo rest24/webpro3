@@ -1,0 +1,1 @@
+Luas Segitiga adalah <?php echo $luas ?>

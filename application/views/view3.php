@@ -1,0 +1,1 @@
+Jadi, Grade yang diperoleh adalah <?php echo $grade ?>
