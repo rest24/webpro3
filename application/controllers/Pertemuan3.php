@@ -16,6 +16,6 @@ class Pertemuan3 extends CI_Controller {
 		$grade = 'D';
 	  }
 	  $data['grade']=$grade;
-	  $this->load->view('view3',$data);_
+	  $this->load->view('view3',$data);
 	}
 }
