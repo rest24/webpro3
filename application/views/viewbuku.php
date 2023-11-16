@@ -1,3 +1,4 @@
+<a href="<?php echo base_url().'buku/tambah';?>">Tambah Data</a>
 <table border='1'>
 	<tr>
 		<td>No</td>

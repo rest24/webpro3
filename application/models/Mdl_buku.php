@@ -8,7 +8,7 @@ class Mdl_buku extends CI_Model {
 		return $query->result();
 	}
 	public function insertBuku($data=''){
-		$this->db->insert('buku'.$data);
+		$this->db->insert('buku',$data);
 		return true;
 	}
 	public function updateBuku($data='',$where=''){
