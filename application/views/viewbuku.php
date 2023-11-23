@@ -19,7 +19,10 @@
 			<td><?php echo $b->judul;?></td>
 			<td><?php echo $b->tahun;?></td>
 			<td><?php echo $b->stok;?></td>
-			<td></td>
+			<td>
+ 			<a href="<?php echo base_url().'buku/ubah/'.$b->id_buku;?>">Ubah</a> |
+ 			<a href="<?php echo base_url().'buku/hapus/'.$b->id_buku;?>">Hapus</a>
+			</td>
 		</tr>
 		<?php
 		}

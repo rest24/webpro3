@@ -30,7 +30,40 @@ class Buku extends CI_Controller {
 			'stok'=>$this->input->post('stok')
 		);
 		
-		$proses=$this->mdl_buku->insertBuku($data);
+		$simpan=$this->mdl_buku->insertBuku($data);
+		redirect('buku');
+	}
+	public function hapus($id_buku='')
+	{
+		$this->load->model('mdl_buku');
+		$where="id_buku='".$id_buku."'";
+		
+		$hapus=$this->mdl_buku->deleteBuku($where);
+		redirect('buku');
+	}
+	public function ubah($id_buku='')
+	{		
+		//Perintah ambil model buku
+		$this->load->model('mdl_buku');
+		$where="id_buku='".$id_buku."'";
+		$data['buku']=$this->mdl_buku->findBuku($where);
+		
+		//Perintah lempar data ke view
+		$this->load->view('editbuku',$data);
+	}
+	public function update($id_buku='')
+	{
+		$this->load->model('mdl_buku');
+		$data=array(
+			'kode'=>$this->input->post('kode'),
+			'judul'=>$this->input->post('judul'),
+			'tahun'=>$this->input->post('tahun'),
+			'stok'=>$this->input->post('stok')
+		);
+		$where="id_buku='".$id_buku."'";
+		
+		$ubah=$this->mdl_buku->updateBuku($data,$where);
+		
 		redirect('buku');
 	}
 }

@@ -7,13 +7,18 @@ class Mdl_buku extends CI_Model {
 		$query=$this->db->get('buku');
 		return $query->result();
 	}
+	public function findBuku($where=''){
+		$this->db->where($where);
+		$query=$this->db->get('buku');
+		return $query->result();
+	}
 	public function insertBuku($data=''){
 		$this->db->insert('buku',$data);
 		return true;
 	}
 	public function updateBuku($data='',$where=''){
 		$this->db->where($where);
-		$this->db->update('buku',$buku);
+		$this->db->update('buku',$data);
 		return true;
 	}
 	public function deleteBuku($where=''){
