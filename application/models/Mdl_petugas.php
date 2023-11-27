@@ -11,14 +11,19 @@ class Mdl_petugas extends CI_Model {
 		$this->db->insert('petugas',$data);
 		return true;
 	}
-	// public function updateBuku($data='',$where=''){
-	// 	$this->db->where($where);
-	// 	$this->db->update('buku',$buku);
-	// 	return true;
-	// }
-	// public function deleteBuku($where=''){
-	// 	$this->db->where($where);
-	// 	$this->db->delete('buku');
-	// 	return true;
-	// }
+	public function findPetugas($where=''){
+		$this->db->where($where);
+		$query=$this->db->get('petugas');
+		return $query->result();
+	}
+	public function updatePetugas($data='',$where=''){
+		$this->db->where($where);
+		$this->db->update('petugas',$data);
+		return true;
+	}
+	public function deletePetugas($where=''){
+		$this->db->where($where);
+		$this->db->delete('petugas');
+		return true;
+	}
 }

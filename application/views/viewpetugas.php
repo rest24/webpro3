@@ -55,7 +55,10 @@
 			<td><?php echo $b->user_petugas;?></td>
 			<td><?php echo $b->nama_petugas;?></td>
 			<td><?php echo $b->pass_petugas;?></td>
-			<td></td>
+			<td>
+			<a href="<?php echo base_url().'petugas/ubah/'.$b->id_petugas;?>">Ubah</a> |
+ 			<a href="<?php echo base_url().'petugas/hapus/'.$b->id_petugas;?>">Hapus</a>
+			</td>
 		</tr>
 		<?php
 		}
