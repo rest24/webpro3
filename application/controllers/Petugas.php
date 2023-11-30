@@ -13,12 +13,14 @@ class Petugas extends CI_Controller {
 		$data['petugas']=$this->mdl_petugas->getPetugas();
 		
 		//Perintah lempar data ke view
-		$this->load->view('viewpetugas',$data);
+		$data['konten']='viewpetugas';
+		$this->load->view('home',$data);
 	}
 	public function tambah()
 	{
 		//Perintah lempar data ke view
-		$this->load->view('addpetugas');
+		$data['konten']='addpetugas';
+		$this->load->view('home',$data);
 	}
 	public function simpan()
 	{
@@ -50,7 +52,8 @@ class Petugas extends CI_Controller {
 		$data['petugas']=$this->mdl_petugas->findPetugas($where);
 		
 		//Perintah lempar data ke view
-		$this->load->view('editpetugas',$data);
+		$data['konten']='editpetugas';
+		$this->load->view('home',$data);
 	}
 	public function update($id_petugas='')
 	{

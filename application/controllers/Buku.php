@@ -13,12 +13,14 @@ class Buku extends CI_Controller {
 		$data['buku']=$this->mdl_buku->getbuku();
 		
 		//Perintah lempar data ke view
-		$this->load->view('viewbuku',$data);
+		$data['konten']='viewbuku';
+		$this->load->view('home',$data);
 	}
 	public function tambah()
 	{
 		//Perintah lempar data ke view
-		$this->load->view('addbuku');
+		$data['konten']='addbuku';
+		$this->load->view('home',$data);
 	}
 	public function simpan()
 	{
@@ -49,7 +51,8 @@ class Buku extends CI_Controller {
 		$data['buku']=$this->mdl_buku->findBuku($where);
 		
 		//Perintah lempar data ke view
-		$this->load->view('editbuku',$data);
+		$data['konten']='editbuku';
+		$this->load->view('home',$data);
 	}
 	public function update($id_buku='')
 	{

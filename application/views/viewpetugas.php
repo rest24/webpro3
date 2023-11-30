@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Petugas</title>
-	<style>
+	<!-- <style>
 		/* Gaya untuk tabel */
 		table {
 			width: 100%;
@@ -33,7 +33,7 @@
 		.add-link:hover {
 			background-color: #0056b3;
 		}
-	</style>
+	</style> -->
 </head>
 <body>
 <a href="<?php echo base_url().'petugas/tambah';?>">Tambah Data</a>

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Anggota</title>
-	<style>
+	<!-- <style>
 		/* Gaya untuk tabel */
 		table {
 			width: 100%;
@@ -33,7 +33,7 @@
 		.add-link:hover {
 			background-color: #0056b3;
 		}
-	</style>
+	</style> -->
 </head>
 <body>
 <a href="<?php echo base_url().'anggota/tambah';?>">Tambah Data</a>
@@ -55,7 +55,10 @@
 			<td><?php echo $b->user_anggota;?></td>
 			<td><?php echo $b->nama_anggota;?></td>
 			<td><?php echo $b->pass_anggota;?></td>
-			<td></td>
+			<td>
+			<a href="<?php echo base_url().'anggota/ubah/'.$b->id_anggota;?>">Ubah</a> |
+ 			<a href="<?php echo base_url().'anggota/hapus/'.$b->id_anggota;?>">Hapus</a>
+			</td>
 		</tr>
 		<?php
 		}

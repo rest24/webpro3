@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tambah Anggota</title>
-	<style>
+	<!-- <style>
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -45,7 +45,7 @@
 		input[type="submit"]:hover {
 			background-color: #0056b3;
 		}
-	</style>
+	</style> -->
 </head>
 <body>
 <form action="<?php echo base_url().'anggota/simpan';?>" method="POST">
